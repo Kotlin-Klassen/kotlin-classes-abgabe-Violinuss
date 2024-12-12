@@ -8,6 +8,6 @@ enum class Genre(val description : String) {
     CHILDREN("Values and norms explained through simple stories");
 
     fun printDescription(){
-        println(description)
+        print(description)
     }
 }

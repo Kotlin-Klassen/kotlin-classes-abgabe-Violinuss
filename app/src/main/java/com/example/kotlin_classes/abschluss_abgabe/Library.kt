@@ -8,9 +8,25 @@ class Library {
         sortiment.add(book)
     }
 
-    fun searchBook(item: String) : List<Book> {
-        return sortiment.filter{it.title.equals(item, ignoreCase = true) || it.author.equals(item, ignoreCase = true)}
+    fun searchBook(item: String) {
+        val foundBook = sortiment.filter {
+            it.title.equals(item, ignoreCase = true) || it.author.equals(
+                item,
+                ignoreCase = true
+            )
+        }
+        if (foundBook.isNotEmpty()) {
+            foundBook.forEach { book ->
+                print("Book found: ${book.title} by ${book.author}, Genre: ${book.genre} - ")
+                book.genre.printDescription()
+                print(", Status: ")
+                printBookStatus(book.status)
+            }
+        } else {
+            println("No Book found.")
+        }
     }
+
 
     fun printStatus(){
         sortiment.forEach{ book ->
@@ -87,5 +103,8 @@ fun main() {
     member.checkoutBook(Book3, "10.02.2025")
 
     myLibrary.printStatus()
+
+    myLibrary.searchBook("Der Heimweg")
+    myLibrary.searchBook("berki Car")
 
 }
