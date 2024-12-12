@@ -3,6 +3,7 @@
 Data-, Enum-, Nested-, Sealed-Klassen
 
 Hier finden sie alles was Sie zum lösen der Aufgaben brauchen.
+
 Eidesstaatliche Erklärung und noch eine Kopie von diesem Code im Briefkasten in Ilias.
 
 Bei Fragen gerne uns eine Mail Schreiben:
